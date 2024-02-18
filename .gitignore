@@ -1,0 +1,25 @@
+# Keep in sync with .prettierignore
+
+# IDE
+/.idea
+/.vscode
+
+# logs
+/logs
+*.log
+
+# npm
+/node_modules
+npm-debug.log*
+
+# dist
+/dist
+
+# coverage
+/.type-coverage
+/coverage-ts
+/coverage
+
+# other
+.env
+*.scss.d.ts
