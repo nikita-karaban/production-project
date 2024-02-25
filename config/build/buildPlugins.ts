@@ -15,6 +15,9 @@ export function buildPlugins({paths: path, isDev}: BuildOptions): webpack.Webpac
             filename: isDev ? '[name].css' : 'style.[hash:6].css',
             chunkFilename: isDev ? '[id].css' : '[id].[hash:6].css',
         }),
-    
+        new webpack.DefinePlugin({
+            __IS_DEV__: JSON.stringify(isDev)
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
