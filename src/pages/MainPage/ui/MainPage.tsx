@@ -1,9 +1,7 @@
-import { useTranslation } from "react-i18next";
+import {useTranslation} from 'react-i18next';
 
-export default function MainPage():JSX.Element {
-    const {t} = useTranslation()
+export default function MainPage(): JSX.Element {
+    const {t} = useTranslation();
 
-    return ( <>
-        {t('main page')}
-    </> );
+    return <div>{t('main page')}</div>;
 }

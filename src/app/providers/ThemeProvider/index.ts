@@ -1,6 +1,3 @@
-import ThemeProvider from './ui/ThemeProvider';
-
+export {ThemeEnum} from './lib/ThemeContext';
 export {useTheme} from './lib/useTheme';
-export {ThemeEnum} from './lib/ThemeContext'
-
-export {ThemeProvider};
+export {default as ThemeProvider} from './ui/ThemeProvider';

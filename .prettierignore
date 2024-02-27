@@ -1,0 +1,25 @@
+# Keep in sync with .gitignore
+
+# IDE
+/.idea
+/.vscode
+
+# logs
+/logs
+*.log
+
+# npm
+/node_modules
+npm-debug.log*
+
+# dist
+/dist
+/online_presence
+/online_presence_posts
+
+# other
+.env
+*.scss.d.ts
+
+/.helm
+

@@ -1,25 +1,20 @@
-import { PropsWithChildren, useMemo, useState } from "react";
-import { LOCAL_STORAGE_THEME_KEY, ThemeContext, ThemeEnum } from "../lib/ThemeContext";
+import {PropsWithChildren, useMemo, useState} from 'react';
 
-const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeEnum || ThemeEnum.LIGHT;
+import {LOCAL_STORAGE_THEME_KEY, ThemeContext, ThemeEnum} from '../lib/ThemeContext';
 
-export default function ThemeProvider(props: PropsWithChildren<{}>) {
+const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeEnum) || ThemeEnum.LIGHT;
+
+export default function ThemeProvider(props: PropsWithChildren<object>): JSX.Element {
     const {children} = props;
     const [theme, setTheme] = useState<ThemeEnum>(defaultTheme);
 
-    const defaultContextValue = useMemo(() => (
-        {
+    const defaultContextValue = useMemo(
+        () => ({
             theme,
             setTheme,
-        }
-    ), [theme])
+        }),
+        [theme],
+    );
 
-
-    return (
-        <ThemeContext.Provider
-            value={defaultContextValue}
-        >
-            {children}
-        </ThemeContext.Provider>
-    )
+    return <ThemeContext.Provider value={defaultContextValue}>{children}</ThemeContext.Provider>;
 }
