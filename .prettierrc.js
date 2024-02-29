@@ -7,7 +7,7 @@ const config = {
     quoteProps: 'consistent',
     overrides: [
         {
-            files: ['*.{yml,yaml}', './public/static/feed-templates/*', 'package.json', 'package-lock.json'],
+            files: ['*.{yml,yaml}', 'package.json', 'package-lock.json'],
             options: {
                 tabWidth: 2,
             },

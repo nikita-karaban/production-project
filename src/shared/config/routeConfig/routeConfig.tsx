@@ -2,12 +2,12 @@ import {AboutPage} from 'pages/AboutPage';
 import {MainPage} from 'pages/MainPage';
 import {RouteProps} from 'react-router-dom';
 
-export enum AppRoutesEnum {
+enum AppRoutesEnum {
     MAIN = 'main',
     ABOUT = 'about',
 }
 
-export const RoutePath: Record<AppRoutesEnum, string> = {
+const RoutePath: Record<AppRoutesEnum, string> = {
     [AppRoutesEnum.MAIN]: '/',
     [AppRoutesEnum.ABOUT]: '/about',
 };

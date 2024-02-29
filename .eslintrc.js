@@ -6,7 +6,7 @@ const config = {
         browser: true,
         es2021: true,
     },
-    ignorePatterns: ['!.prettierrc.js'],
+    ignorePatterns: ['!.prettierrc.js', '!.stylelintrc.js'],
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
@@ -17,6 +17,7 @@ const config = {
         'plugin:react-hooks/recommended',
         'plugin:react/all',
         'plugin:react/jsx-runtime',
+        "plugin:i18next/recommended",
         'prettier',
     ],
     parser: '@typescript-eslint/parser',
@@ -27,7 +28,7 @@ const config = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'simple-import-sort'],
+    plugins: ['react', '@typescript-eslint', 'simple-import-sort', "i18next"],
     settings: {
         'import/resolver': {
             typescript: true,
@@ -227,6 +228,7 @@ const config = {
         'sort-vars': 'error',
         'spaced-comment': 'error',
         'strict': 'error',
+        "i18next/no-literal-string": ['error', {markupOnly: true}]
     },
     overrides: [
         {
@@ -241,6 +243,12 @@ const config = {
             rules: {
                 'import/no-default-export': 'off',
                 'import/no-named-as-default': 'off',
+            },
+        },
+        {
+            files: ['.prettierrc.js', '.stylelintrc.js'],
+            rules: {
+                'no-undef': 'off',
             },
         },
     ],

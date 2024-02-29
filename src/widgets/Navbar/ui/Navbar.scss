@@ -1,12 +1,11 @@
 .Navbar {
-    width: 100%;
-    height: $navbar-height;
+    align-items: center;
     background-color: var(--inverted-bg-color);
-
     display: flex;
     flex-direction: row;
-    align-items: center;
+    height: $navbar-height;
     padding: $spacer-xl;
+    width: 100%;
 
     &_links {
         display: flex;

@@ -1,9 +1,8 @@
 .Sidebar {
-    height: calc(100vh - $navbar-height);
-    width: $sidebar-width;
     background-color: var(--inverted-bg-color);
-
+    height: calc(100vh - $navbar-height);
     position: relative;
+    width: $sidebar-width;
     transition: width 0.3s;
 
     &__collapsed {
@@ -11,11 +10,11 @@
     }
 
     &_switchers {
-        position: absolute;
         bottom: 20px;
         display: flex;
-        justify-content: center;
-        width: 100%;
         gap: $spacer-xl;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
     }
 }
