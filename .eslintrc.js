@@ -109,7 +109,7 @@ const config = {
         'import/newline-after-import': 'error',
         'import/no-duplicates': 'error', // 'warn' in import/recommended
         'init-declarations': 'error',
-        'max-len': ['error', {code: 120}],
+        'max-len': ['error', {code: 120, ignoreComments: true}],
         'lines-between-class-members': [
             'error',
             'always',

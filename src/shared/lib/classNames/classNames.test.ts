@@ -15,13 +15,13 @@ describe('classNames', () => {
             'class-two': false,
             'class-three': true,
         });
-    
+
         expect(result).toBe('class-one class-three');
     });
 
     test('should skip falsy, null, and undefined values', () => {
-        const result = classNames(null, 'one', undefined, { 'class-two': false });
-    
+        const result = classNames(null, 'one', undefined, {'class-two': false});
+
         expect(result).toBe('one');
     });
 });
