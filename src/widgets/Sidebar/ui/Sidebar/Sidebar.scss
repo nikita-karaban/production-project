@@ -2,8 +2,8 @@
     background-color: var(--inverted-bg-color);
     height: calc(100vh - $navbar-height);
     position: relative;
-    width: $sidebar-width;
     transition: width 0.3s;
+    width: $sidebar-width;
 
     &__collapsed {
         width: $sidebar-width-collapsed;
