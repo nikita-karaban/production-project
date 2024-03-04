@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 // eslint-disable-next-line import/no-named-as-default
 import webpack from 'webpack';
+import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 
 import {type BuildOptions} from './types/config';
 
@@ -21,5 +22,8 @@ export function buildPlugins({paths: path, isDev}: BuildOptions): Array<webpack.
             __IS_DEV__: JSON.stringify(isDev),
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }),
     ];
 }

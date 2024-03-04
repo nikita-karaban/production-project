@@ -5,5 +5,7 @@
     "main page": "Главная страница",
     "language": "Englishs",
     "switcher": "переключить",
-    "Not Found Page": "Страница не найдена"
+    "Not Found Page": "Страница не найдена",
+    "Upload Page": "Обновить страницу",
+    "An unexpected error has occurred": "Произошла непредвиденная ошибка"
 }

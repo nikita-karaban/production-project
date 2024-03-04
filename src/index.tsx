@@ -1,6 +1,7 @@
 import './app/css/root.scss';
 import 'shared/config/i18n/i18n';
 
+import {ErrorBoundary} from 'app/providers/ErrorBoundary';
 import {render} from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 
@@ -11,9 +12,11 @@ const nodeWrapper = document.querySelector('#root');
 
 render(
     <BrowserRouter>
-        <ThemeProvider>
-            <App />
-        </ThemeProvider>
+        <ErrorBoundary>
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+        </ErrorBoundary>
     </BrowserRouter>,
     nodeWrapper,
 );
