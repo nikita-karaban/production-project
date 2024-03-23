@@ -20,6 +20,7 @@ const config = {
         'plugin:react/jsx-runtime',
         'plugin:i18next/recommended',
         'prettier',
+        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -229,7 +230,7 @@ const config = {
         'sort-vars': 'error',
         'spaced-comment': 'error',
         'strict': 'error',
-        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ['data-testid']}],
     },
     overrides: [
         {
@@ -250,6 +251,12 @@ const config = {
             files: ['.prettierrc.js', '.stylelintrc.js'],
             rules: {
                 'no-undef': 'off',
+            },
+        },
+        {
+            files: ['src/**/*.test.{ts, tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
             },
         },
     ],

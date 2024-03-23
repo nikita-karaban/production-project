@@ -5,6 +5,7 @@ import * as styles from './Button.scss';
 
 export enum ThemeButtonEnum {
     CLEAR = 'clear',
+    OUTLINE = 'outline',
 }
 
 type ButtonPropsType = PropsWithChildren<{
@@ -14,7 +15,7 @@ type ButtonPropsType = PropsWithChildren<{
     ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function Button(props: ButtonPropsType): JSX.Element {
-    const {className, children, theme = ThemeButtonEnum.CLEAR, ...restProps} = props;
+    const {className, children, theme, ...restProps} = props;
 
     return (
         <button

@@ -8,4 +8,11 @@
         outline: none;
         padding: 0;
     }
+
+    &__outline {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: $spacer-m $spacer-l;
+    }
 }
