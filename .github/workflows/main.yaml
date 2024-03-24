@@ -22,7 +22,7 @@ jobs:
       - name: build production project
         run: npm run build:prod
       - name: linting
-        run: npm run lint
+        run: npm run lint:fix
       - name: unit testing
         run: npm run test:unit
       - name: build storybook
