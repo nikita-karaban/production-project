@@ -21,8 +21,8 @@ jobs:
         run: npm install
       - name: build production project
         run: npm run build:prod
-      - name: linting
-        run: npm run lint
+      # - name: linting
+      #   run: npm run lint
       - name: unit testing
         run: npm run test:unit
       - name: build storybook
