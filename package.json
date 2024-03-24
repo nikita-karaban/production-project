@@ -13,7 +13,7 @@
     "scss-definitions": "rimraf --glob \"./src/**/*.scss.d.ts\" & typed-scss-modules \"./src/**/!(var|themes)/*.scss\" --nameFormat dashes --logLevel error --additionalData \"@use './src/app/css/var/var' as *;\"",
     "eslint:ts": " eslint \"**/*.{ts,tsx}\"",
     "eslint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix",
-    "prettier": "prettier --check . --loglevel warn",
+    "prettier": "prettier --check . --log-level warn",
     "prettier:fix": "npm run prettier -- --write . ",
     "stylelint": "stylelint \"./src/**/*.scss\"",
     "stylelint:fix": "npm run stylelint -- --fix",
