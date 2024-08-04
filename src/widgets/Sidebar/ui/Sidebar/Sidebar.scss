@@ -16,5 +16,43 @@
         justify-content: center;
         position: absolute;
         width: 100%;
+
+        .Sidebar__collapsed & {
+            flex-direction: column;
+        }
+    }
+
+    &_button {
+        bottom: 32px;
+        position: absolute;
+        right: -32px;
+    }
+
+    &_items {
+        display: flex;
+        flex-direction: column;
+        gap: $spacer-m;
+        margin-left: $spacer-xxl;
+        margin-top: $spacer-l;
+    }
+
+    &_link {
+        align-items: center;
+        display: flex;
+        gap: $spacer-m;
+    }
+
+    &_icon {
+        fill: var(--inverted-primary-color);
+    }
+
+    &_text {
+        opacity: 1;
+        transition: 0.3s opacity;
+
+        .Sidebar__collapsed & {
+            opacity: 0;
+            width: 0;
+        }
     }
 }

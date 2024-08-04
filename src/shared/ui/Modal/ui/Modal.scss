@@ -1,0 +1,38 @@
+.Modal {
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: $modal-z-index;
+
+    &__opened {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &_overlay {
+        align-items: center;
+        background: $overlay-color;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &_content {
+        background: var(--inverted-bg-color);
+        border-radius: 12px;
+        max-width: 60%;
+        padding: $spacer-xl;
+        transform: scale(0.5);
+        transition: 0.3s transform;
+
+        .Modal__opened & {
+            transform: scale(1);
+        }
+
+        .Modal__closing & {
+            transform: scale(0.2);
+        }
+    }
+}

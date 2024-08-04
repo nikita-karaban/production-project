@@ -1,0 +1,69 @@
+.Button {
+    color: var(--primary-color);
+    padding: 6px 15px;
+
+    &__clear {
+        background: none;
+        border: 0 solid;
+        margin: 0;
+        outline: none;
+        padding: 0;
+    }
+
+    &__square {
+        align-items: center;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        width: 40px;
+    }
+
+    &__square.Button__size__m {
+        font: $text-m;
+        height: 24px;
+        width: 24px;
+    }
+
+    &__square.Button__size__l {
+        font: $text-l;
+        height: 32px;
+        width: 32px;
+    }
+
+    &__square.Button__size__xl {
+        font: $text-xl;
+        height: 40px;
+        width: 40px;
+    }
+
+    &__outline {
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: $spacer-m $spacer-l;
+    }
+
+    &__background {
+        background: var(--bg-color);
+        border: 0;
+        color: var(--primary-color);
+    }
+
+    &__backgroundInverted {
+        background: var(--inverted-bg-color);
+        border: 0;
+        color: var(--inverted-primary-color);
+    }
+
+    &__size__m {
+        font: $text-m;
+    }
+
+    &__size__l {
+        font: $text-l;
+    }
+
+    &__size__xl {
+        font: $text-xl;
+    }
+}

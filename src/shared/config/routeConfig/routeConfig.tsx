@@ -9,7 +9,7 @@ enum AppRoutesEnum {
     NOT_FOUND = 'not_found',
 }
 
-const RoutePath: Record<AppRoutesEnum, string> = {
+export const RoutePath: Record<AppRoutesEnum, string> = {
     [AppRoutesEnum.MAIN]: '/',
     [AppRoutesEnum.ABOUT]: '/about',
     [AppRoutesEnum.NOT_FOUND]: '*',

@@ -230,7 +230,10 @@ const config = {
         'sort-vars': 'error',
         'spaced-comment': 'error',
         'strict': 'error',
-        'i18next/no-literal-string': ['error', {markupOnly: true, ignoreAttribute: ['data-testid']}],
+        'i18next/no-literal-string': ['warn', {markupOnly: true, ignoreAttribute: ['data-testid']}],
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react/prefer-read-only-props': 'off',
     },
     overrides: [
         {

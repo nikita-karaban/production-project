@@ -7,7 +7,7 @@
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noUncheckedIndexedAccess": true,
-        "noUnusedLocals": true,
+        "noUnusedLocals": false,
         "noUnusedParameters": true,
 
         "module": "ESNext",

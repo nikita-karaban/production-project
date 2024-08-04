@@ -23,3 +23,8 @@ npm-debug.log*
 
 /.helm
 
+#storybook
+/storybook-static
+
+#i18n
+/extractedTranslations
